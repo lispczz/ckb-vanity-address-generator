@@ -1,0 +1,19 @@
+[package]
+name = "ckb-vanity-address-generator"
+version = "0.1.0"
+authors = ["lispczz <mycinbrin@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num_cpus = "1.11.1"
+rand = "0.7.2"
+bech32 = "0.7.1"
+secp256k1 = { version = "0.17.1", features = ["rand-std"] }
+blake2b_simd = "0.5.9"
+hex-literal = "0.2.1"
+
+[profile.release]
+opt-level = 3
+
